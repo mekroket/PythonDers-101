@@ -19,18 +19,20 @@ kullanıcı=input("KULLANICI ADNIZI GİRİNİZ: ")
 if(sys_kullanıcı==kullanıcı and sys_şifre==şifre):
     time.sleep(3)
     print("giriş yapıldı,sisteme yönlendiriliyorsunuz........")
-    işlem1=input("Yapmak istediğiniz işlemi seçiniz: ")
-    if(işlem1=="1"):
-        ekle=int(input("ne kafar para eklemek istiyorsunuz: "))
-        para+=ekle
-        print("En son para durumunuz: ",para)
-    elif (işlem1 == "2"):
-        ekle = int(nput("ne kafar para çıkarmak istiyorsunuz: "))
-        para -= ekle
-        print("En son para durumunuz: ", para)
-    else:
-        print("çıkış yapılıyor.....")
-        exit()
+    while True:
+
+        işlem1=input("Yapmak istediğiniz işlemi seçiniz: ")
+        if(işlem1=="1"):
+            ekle=int(input("ne kafar para eklemek istiyorsunuz: "))
+            para+=ekle
+            print("En son para durumunuz: ",para)
+        elif (işlem1 == "2"):
+            ekle = int(input("ne kafar para çıkarmak istiyorsunuz: "))
+            para -= ekle
+            print("En son para durumunuz: ", para)
+        else:
+            print("çıkış yapılıyor.....")
+            exit()
 
 elif(sys_kullanıcı==kullanıcı and sys_şifre!=şifre):
     time.sleep(3)
